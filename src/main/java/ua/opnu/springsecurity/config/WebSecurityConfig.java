@@ -20,9 +20,9 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().authenticated() // Всі запити потребують логіна
+                        .anyRequest().authenticated() 
                 )
-                .formLogin(withDefaults()) // Стандартна форма логіна
+                .formLogin(withDefaults()) 
                 .logout(withDefaults());
 
         return http.build();
